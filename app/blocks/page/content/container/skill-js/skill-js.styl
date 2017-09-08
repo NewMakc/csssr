@@ -1,0 +1,66 @@
+.js-scill-section
+	margin-bottom 35px
+
+	.title
+		margin-bottom 5px
+
+	.js-skill-map
+		width: 100%
+		height: 60px
+		position: relative
+		cursor: pointer
+
+		.slider
+			display: inline-block
+			height: 14px
+			position: relative
+			margin-top 20px
+			z-index: 2
+			background-image url(img-dir-scale1x + 'js-skill-slider.png')
+			cursor: pointer
+
+		&::before
+			content: "";
+			display: block;
+			position: absolute;
+			top: 9px;
+			left: 0;
+			width: 100%;
+			height: 60px;
+			background-image url(img-dir-scale1x + 'js-skill-map.png')
+			background-repeat no-repeat
+			background-size cover
+
+	.skill-level
+		display flex
+		justify-content space-between
+
+		.title
+			display inline-block
+			max-width 170px
+			font-family: 'PT Sans'
+			font-size: 13px;
+			font-weight: bold;
+			line-height: 1.46;
+			color: #2f1b15;
+
+			&:nth-child(2)
+				margin-left 5px
+
+			&:nth-child(3)
+				margin-left -27px
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5)
+
+	.js-scill-section
+		.js-skill-map
+			.slider
+				background-image url(img-dir-scale2x + 'js-skill-slider.png') !important
+				background-size cover
+
+			&::before
+				background-image url(img-dir-scale1x + 'js-skill-map.png') !important
+				background-size cover

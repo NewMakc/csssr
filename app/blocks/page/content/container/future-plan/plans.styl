@@ -1,0 +1,58 @@
+.plans-category
+	display flex
+	flex-wrap wrap
+	margin-bottom 88px
+
+	.category
+		margin-right 15px
+
+		input
+			display none
+
+		input[type='radio'] + label
+			position relative
+			display inline-block
+			max-width 230px
+			padding-left 30px
+			font-family: 'PT Sans';
+			font-size: 21px;
+			font-weight: bold;
+			line-height: 1.19;
+			color: #000000;
+			cursor pointer
+
+			&::before
+				content ''
+				position absolute
+				width 40px
+				height 40px
+				top -10px
+				left -10px
+				background-image url(img-dir-scale1x + 'radio-uncheked.png')
+				background-repeat no-repeat
+				cursor pointer
+
+		input[type='radio']:checked + label
+
+			&::before
+				width 40px
+				height 40px
+				top -10px
+				background-image url(img-dir-scale1x + 'radio-cheked.png')
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5)
+
+	.plans-category
+		.category
+			input[type='radio'] + label
+				&::before
+					background-image url(img-dir-scale2x + 'radio-uncheked.png') !important
+					background-size cover
+
+			input[type='radio']:checked + label
+				&::before
+					background-image url(img-dir-scale2x + 'radio-cheked.png') !important
+					background-size cover

@@ -1,0 +1,80 @@
+.skill-checklist
+	margin-bottom 30px
+
+	.checklist
+		height 250px
+		display flex
+		flex-wrap: wrap;
+		flex-direction: column;
+
+		.skill
+			margin-bottom 10px
+			display inline-block
+
+			label
+				.blog_link
+					color: #1f5f97;
+
+			input
+				display none
+
+			input[type='checkbox'] + label
+				position relative
+				display inline-block
+				max-width 245px
+				padding-left 28px
+				font-family: 'PT Sans';
+				font-size: 21px;
+				font-weight: bold;
+				line-height: 1.19;
+				color: #000000;
+				cursor pointer
+
+				&::before
+					content ''
+					position absolute
+					width 19px
+					height 18px
+					top 3px
+					left 0
+					background-image url(img-dir-scale1x + 'checkbox-uncheked.png')
+					background-repeat no-repeat
+					cursor pointer
+
+			input[type='checkbox']:checked + label
+
+				&::before
+					width 25px
+					height 28px
+					top -7px
+					background-image url(img-dir-scale1x + 'checkbox-cheked.png')
+
+			.accurate_eye
+				width 180px
+
+				.all
+					position absolute
+					left: 118px;
+					top 2px
+
+				.ok
+					position absolute
+					right 5px
+					top 4px
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5)
+
+	.skill-checklist
+		.skill
+			input[type='checkbox'] + label
+				&::before
+					background-image url(img-dir-scale2x + 'checkbox-uncheked.png') !important
+					background-size cover
+
+			input[type='checkbox']:checked + label
+				&::before
+					background-image url(img-dir-scale2x + 'checkbox-cheked.png') !important
+					background-size cover

@@ -1,0 +1,52 @@
+header
+	position relative
+	margin-bottom 60px
+
+	.logo,
+	.main-title-logo,
+	.secret-logo
+		display inline-block
+		background-repeat no-repeat
+		background-position 0 0
+
+	.logo
+		position absolute
+		top 14px
+		left 0
+		width 154px
+		height 52px
+		float left
+		background-image url(img-dir-scale1x + 'logo.png')
+
+	.main-title-logo
+		width 221px
+		height 118px
+		margin-top 106px
+		margin-left 260px
+		background-image url(img-dir-scale1x + 'main-title.png')
+
+	.secret-logo
+		position absolute
+		top 0
+		right -64px
+		width 252px
+		height 106px
+		float right
+		background-image url(img-dir-scale1x + 'secret-icon.png')
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5)
+
+	.logo
+		background-image url(img-dir-scale2x + 'logo.png') !important
+		background-size cover
+
+	.main-title-logo
+		background-image url(img-dir-scale2x + 'main-title.png') !important
+		background-size cover
+
+	.secret-logo
+		background-image url(img-dir-scale2x + 'secret-icon.png') !important
+		background-size cover

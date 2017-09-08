@@ -1,0 +1,29 @@
+- var category_id = ['bem','pug', 'less', 'svg', 'semantic', 'accessibility','js', 'gulp', 'webpack', 'webGL', 'jQuery','angular', 'react', 'node', 'git'];
+- var category = ['БЭМ/OOCSS','Pug (Jade)', 'Stylus/LESS/SASS', 'Работаю с SVG', 'Верстаю семантично', 'Accessibility (A11Y)','ES2015/ES2016', 'Gulp/GRUNT', 'Webpack', 'Дружу с WebGL', 'JQuery','Знаю/изучаю Angular', 'Знаю/изучаю React', 'Знаю/изучаю Node.js', 'Использую Git'];
+- var personal_data_title = [true, true, true, true, false, false, true, true, true, false, true, false, true, true, true];
+
+-var x = category.length
+div.main-category.skill-checklist
+	h3.title Расскажите о себе чекбоксами
+	p.description Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+	div.checklist
+		- for (var i = 0; i < x; i++) {
+			div.skill
+				input(type='checkbox' id= category_id[i] checked=personal_data_title[i])
+				label(for= category_id[i])= category[i]
+		- }
+		div.skill
+			input(type='checkbox' id= 'accurate_eye' checked= true)
+			label(for= 'accurate_eye' class='accurate_eye')= 'С глазом'
+				span.all всё
+				spam.ok ок
+		div.skill
+			input(type='checkbox' id= 'blog' checked= false)
+			label(for= 'blog')= 'Читаю'
+				a(href='http://blog.csssr.ru' class= 'blog_link') blog.csssr.ru
+		div.skill
+			input(type='checkbox' id= 'lazy' checked= true)
+			label(for= 'lazy')= 'Я ленивый(-ая)'
+		div.skill
+			input(type='checkbox' id= 'english' checked= false)
+			label(for= 'english')= 'У меня хороший английский'

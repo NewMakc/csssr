@@ -1,0 +1,47 @@
+footer
+	display flex
+
+	label
+		font-family: 'PT Sans';
+		font-size: 22.1px;
+		font-weight: bold;
+		line-height: 2.25;
+		color: #2f1b15;
+		margin-right 16px
+
+	.date
+		margin-top -7px
+		max-width 206px
+		position relative
+
+		&::after
+			position absolute
+			bottom 10px
+			content ''
+			display block
+			width 100%
+			height 9px
+			background-image url(img-dir-scale1x + 'underline-for-date.png')
+			background-repeat no-repeat
+			background-position-x: 100%
+
+		input
+			padding 0 10px
+			width 100%
+			font-family: CourierNewPSMT;
+			background: none;
+			border: none;
+			font-size: 30px;
+			line-height: 1.2;
+			color: #231f20;
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5)
+
+	footer
+		.date
+			&::after
+				background-image url(img-dir-scale2x + 'underline-for-date.png') !important
+				background-size cover

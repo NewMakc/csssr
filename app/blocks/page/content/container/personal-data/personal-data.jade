@@ -1,0 +1,12 @@
+- var input_id = ['name', 'year', 'location', 'skype', 'email'];
+- var personal_data_title = ['Полное ФИО', 'Год рождения', 'Место жительства', 'Скайп', 'Почта'];
+- var personal_data_answer = ['Волков Максим Сергеевич', '1996', 'г.Калуга', 'NeeSTooR1996', 'qwertynestor40@gmail.com']
+
+- var x = input_id.length;
+div.personal-data
+	- for (var i = 0; i < x; i++) {
+		div.answer
+			label(for= input_id[i])= personal_data_title[i]
+			div.entered_data
+				input(id= input_id[i] value= personal_data_answer[i])
+	- }
